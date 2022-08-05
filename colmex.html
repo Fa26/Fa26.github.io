@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>colmex</title>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		font-family: arial; 
+	}
+	.loteria{
+		background: #A8396A;
+		width: 100%;
+		min-height: 50vh;
+		color:white;
+	}
+	.titulo{
+		display: flex;
+	}
+	.titulo h1{  font-size: 1.2rem; padding-top: 10px;  margin-left: 150px }
+	.definicion-palabra{
+		display: flex;
+		width: 100%;
+		align-items: center;
+		margin-top: 40px;
+	}
+	.imagen{
+		width: 50%;
+		display: flex;
+		margin-top: 30px;
+		justify-content: flex-end;
+		padding-right: 30px;
+
+	}
+	.imagen >img{
+		width: 40%;
+	}
+	.def{
+		width: 50%;
+		display: flex;
+		align-content: center;
+		flex-direction: column;
+		justify-content: center;
+		padding-right:  20px;
+
+
+		
+	}
+	button{
+		width:30%;
+	}
+	.defincion-dem{
+		width:0px;
+		position: absolute;
+		top:0;
+		z-index: 1;
+		height: 315px;
+		left: 0;
+	   background-color: rgba(0,0,0, 0.9);
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 0px;
+		color: white;
+		display: flex;
+
+		
+
+	}
+	.demi{
+		display: flex;
+		justify-content:  flex-end;
+		width: 50%;
+
+	}
+	.demi img{
+		height:auto;
+		width: 60%;
+	}
+	.demf{
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: justify;
+		padding-left: 30px
+		}
+	.demf >p{ transition: 0.3s;}
+
+@media  (max-width: 600px) {
+	.loteria{height: 90vh;}
+	.titulo{justify-content: center;}
+	.titulo>h1{font-size: small;margin-left: 0; }
+	.definicion-palabra{
+		flex-direction: column;
+		
+	}
+	.imagen{
+		justify-content: center;
+		margin-bottom: 120px;
+	}
+	.imagen >img{
+		width: 100%;
+	}
+	button{font-size: small;}
+	.def{width: 100%;padding-left: 90px; font-size: small; }
+	.demf>p{font-size: small;}
+	
+
+}
+
+
+
+	
+	
+</style>
+
+<body>
+	<div>
+
+		<div class="loteria">
+			<div class="titulo">
+				<h1>LOTERIA DE PALABRAS </h1>
+			</div>
+			<div class="definicion-palabra">
+				<div class="imagen" id="imagenLogo">
+					<img src="Copia de logo_header_dem 2.png">
+					
+				</div>
+				<div class="def">
+					<h2>infinitesimal </h2>
+					<br>
+					<p>
+						adj m y f<br><br>
+
+						1 Que es infinitamente pequeño<br>
+
+						2 (Mat) Que pertenece a cantidades infinitamente pequeñas o cuyo límite es cero: cálculo infinitesimal
+
+
+					</p><br>
+					<button>Leer articulo completo</button>
+				</div>
+				
+			</div>
+		</div>
+		<div class="defincion-dem" id="barraDef">
+			<div class="demf">	
+
+				<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+			<div class="demi"><img src="logo_header_dem.png"></div>
+		
+			
+		</div>
+	
+	</div>
+	<div style="margin-top:30px">
+		<div style="display: flex; ">
+			<img src="logo_dem.png" width="7%">
+			<h1 style="margin-top: 30px;">Loteria <br>de Palabras</h1>
+		</div>
+		<div style="width: 100%; display: flex;">
+			<div style="width: 50%; display: flex; padding-bottom: 10px;background: black">
+
+				<p style="text-align: justify; margin-top: 90px; padding-left: 20px; padding-right: 40px;color: white">DEM: <BR>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<img src="ave.png" width="50%">
+			</div>
+			<div style="width: 50%;">
+					<div style="padding-left: 10px">
+					<h2>infinitesimal </h2>
+					<br>
+					<p>
+						adj m y f<br><br>
+
+						1 Que es infinitamente pequeño<br>
+
+						2 (Mat) Que pertenece a cantidades infinitamente pequeñas o cuyo límite es cero: cálculo infinitesimal
+
+
+					</p><br>
+					<button>Leer articulo completo</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div style="margin-top:30px">
+		<div style="display: flex; ">
+			<h1 style="margin-top: 30px;" class="lote">Loteria <br>de Palabras</h1>
+		</div>
+		<div style="width: 100%; display: flex; background: black; color: white; height:40vh;">
+			<div style="width: 50%; display: flex; ">
+
+				<p style="text-align: justify; margin-top: 90px; padding-left: 20px; padding-right: 40px;color: white" class="demd">DEM: <BR>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<img src="l.png" width="50%" height="98%">
+			</div>
+			<div style="width: 40%; background: white; color: black">
+					<div style="padding-left: 10px; padding-right:30px">
+					<h2>infinitesimal </h2>
+					<br>
+					<p>
+						adj m y f<br><br>
+
+						1 Que es infinitamente pequeño<br>
+
+						2 (Mat) Que pertenece a cantidades infinitamente pequeñas o cuyo límite es cero: cálculo infinitesimal
+
+
+					</p><br>
+					<button>Leer articulo completo</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script type="text/javascript">
+		ScrollReveal().reveal('.lote', {
+		 	   delay: 375,
+		    duration: 500,
+		    reset: true,
+		    distance: '50px' ,
+		    origin: 'top'
+		  });
+		ScrollReveal().reveal('.demd',{
+			delay: 75,
+		    duration: 1900,
+		    reset: true,
+		    distance: '70px' ,
+		    origin: 'left'
+
+		})
+
+	console.log("hola")
+	const barra = document.getElementById("barraDef")
+	const imagen = document.getElementById("imagenLogo")
+	imagen.addEventListener("mouseover", (event) => {
+
+	const barra = document.getElementById("barraDef")
+	barra.style.width="50%"
+
+
+	  setTimeout(() => {
+    		barra.style.width="0px"
+
+  			}, 6300);
+
+
+	})
+
+</script>
+
+</body>
+
+</html>
