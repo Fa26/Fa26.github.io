@@ -9,7 +9,7 @@
 		font-family: arial; 
 	}
 	.loteria{
-		background: #A8396A;
+		background: #9b2743;
 		width: 100%;
 		min-height: 50vh;
 		color:white;
@@ -25,7 +25,7 @@
 		margin-top: 40px;
 	}
 	.imagen{
-		width: 50%;
+		width: 40%;
 		display: flex;
 		margin-top: 30px;
 		justify-content: flex-end;
@@ -33,7 +33,7 @@
 
 	}
 	.imagen >img{
-		width: 40%;
+		
 	}
 	.def{
 		width: 50%;
@@ -77,14 +77,14 @@
 		width: 60%;
 	}
 	.demf{
-		width: 50%;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		text-align: justify;
-		padding-left: 30px
+
 		}
-	.demf >p{ transition: 0.3s;}
+	.demf >p{ transition: 0.3s; padding-left: 40px; padding-right: 40px}
 
 @media  (max-width: 600px) {
 	.loteria{height: 90vh;}
@@ -99,7 +99,7 @@
 		margin-bottom: 120px;
 	}
 	.imagen >img{
-		width: 100%;
+		width: 20px;
 	}
 	button{font-size: small;}
 	.def{width: 100%;padding-left: 90px; font-size: small; }
@@ -123,7 +123,7 @@
 			</div>
 			<div class="definicion-palabra">
 				<div class="imagen" id="imagenLogo">
-					<img src="Copia de logo_header_dem 2.png">
+					<img src="logoB.png" >
 					
 				</div>
 				<div class="def">
@@ -146,8 +146,7 @@
 		<div class="defincion-dem" id="barraDef">
 			<div class="demf">	
 
-				<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
-			<div class="demi"><img src="logo_header_dem.png"></div>
+				<p> DEM:<BR>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
 		
 			
 		</div>
@@ -155,18 +154,18 @@
 	</div>
 	<div style="margin-top:30px">
 		<div style="display: flex; ">
-			<img src="logo_dem.png" width="7%">
-			<h1 style="margin-top: 30px;">Loteria <br>de Palabras</h1>
+			<img src="logo_dem.png" width="6%">
+			<h1 style="margin-top: 20px;">Loteria <br>de Palabras</h1>
 		</div>
 		<div style="width: 100%; display: flex;">
-			<div style="width: 50%; display: flex; padding-bottom: 10px;background: black">
+			<div style="width: 50%; display: flex; padding-bottom: 10px;background: #9b2743">
 
-				<p style="text-align: justify; margin-top: 90px; padding-left: 20px; padding-right: 40px;color: white">DEM: <BR>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<p style="text-align: justify; margin-top: 57px; padding-left: 20px; padding-right: 40px;color: white">DEM: <BR>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 				<img src="ave.png" width="50%">
 			</div>
 			<div style="width: 50%;">
 					<div style="padding-left: 10px">
-					<h2>infinitesimal </h2>
+					<h2 style="color: #9b2743">infinitesimal </h2>
 					<br>
 					<p>
 						adj m y f<br><br>
@@ -185,28 +184,31 @@
 
 		<div style="margin-top:30px">
 		<div style="display: flex; ">
-			<h1 style="margin-top: 30px;" class="lote">Loteria <br>de Palabras</h1>
+			<img src="Copia de logo_header_dem 2.png" width="10%">
+			<h1 style="margin-top: 15px; padding-left: 5px" class="lote">  Loteria de Palabras</h1>
 		</div>
-		<div style="width: 100%; display: flex; background: black; color: white; height:40vh;">
+		<div style="width: 100%; display: flex; background:  #9b2743; color: white; height:40vh;">
 			<div style="width: 50%; display: flex; ">
 
 				<p style="text-align: justify; margin-top: 90px; padding-left: 20px; padding-right: 40px;color: white" class="demd">DEM: <BR>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				<img src="l.png" width="50%" height="98%">
 			</div>
-			<div style="width: 40%; background: white; color: black">
+			<div style="width: 40%; background: white; color: black;">
 					<div style="padding-left: 10px; padding-right:30px">
-					<h2>infinitesimal </h2>
+					<h2 style="color:#9b2743; " class="infinitesimal">infinitesimal </h2>
 					<br>
-					<p>
+					<p class="infinitesimal" >
 						adj m y f<br><br>
 
-						1 Que es infinitamente pequeño<br>
+						1 Que es infinitamente pequeño<br><br>
 
-						2 (Mat) Que pertenece a cantidades infinitamente pequeñas o cuyo límite es cero: cálculo infinitesimal
+						2 (Mat) Que pertenece a cantidades infinitamente pequeñas o cuyo límite es cero: cálculo infinitesimal<br><br>
+						3 Que es infinitamente pequeño<br>
+
+					
 
 
 					</p><br>
-					<button>Leer articulo completo</button>
+					<button class="buton">Leer articulo completo</button>
 				</div>
 			</div>
 		</div>
@@ -226,6 +228,22 @@
 		    reset: true,
 		    distance: '70px' ,
 		    origin: 'left'
+
+		})
+		ScrollReveal().reveal('.infinitesimal',{
+			delay: 75,
+		    duration: 1900,
+		    reset: true,
+		    distance: '70px' ,
+		    origin: 'top'
+
+		})
+			ScrollReveal().reveal('.buton',{
+			delay: 75,
+		    duration: 1900,
+		    reset: true,
+		    distance: '70px' ,
+		    origin: 'bottom'
 
 		})
 
