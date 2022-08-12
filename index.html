@@ -54,7 +54,8 @@
 		position: absolute;
 		top:0;
 		z-index: 1;
-		height: 350px;
+				min-height: 50vh;
+
 		left: 0;
 	   background-color: rgba(0,0,0, 0.9);
 		overflow-x: hidden;
@@ -185,7 +186,7 @@
 		<div style="margin-top:30px">
 		<div style="display: flex; ">
 			<img src="Copia de logo_header_dem 2.png" width="10%">
-			<h1 style="margin-top: 15px; padding-left: 5px" class="lote">  Loteria de Palabras</h1>
+			<h1 style="margin-top: 15px; padding-left: 5px" class="lote" id="messenger">  </h1>
 		</div>
 		<div style="width: 100%; display: flex; background:  #9b2743; color: white; height:40vh;">
 			<div style="width: 50%; display: flex; ">
@@ -212,6 +213,10 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="efecto-type" id="typedtext" style="padding: 20px; font-size: 3rem; font-weight: 600"></div>
+	<!--<div class="efecto-random"  id="messenger" style="padding: 20px; font-size: 3rem; font-weight: 600">-->
+		
 	</div>
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script type="text/javascript">
@@ -263,6 +268,91 @@
 
 
 	})
+
+
+
+		// set up text to print, each item in array is new line
+	var aText = new Array(
+	"Loteria de Palabras",
+	"LOTERIA DE PALABRAS"
+	);
+	var iSpeed = 100; // time delay of print out
+	var iIndex = 0; // start printing array at this posision
+	var iArrLength = aText[0].length; // the length of the text array
+	var iScrollAt = 20; // start scrolling up at this many lines
+	 
+	var iTextPos = 0; // initialise text position
+	var sContents = ''; // initialise contents variable
+	var iRow; // initialise current row
+	 
+	function typewriter()
+	{
+	 sContents =  ' ';
+	 iRow = Math.max(0, iIndex-iScrollAt);
+	 var destination = document.getElementById("typedtext");
+	 
+	 while ( iRow < iIndex ) {
+	  sContents += aText[iRow++] + '<br />';
+	 }
+	 destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+	 if ( iTextPos++ == iArrLength ) {
+	  iTextPos = 0;
+	  iIndex++;
+	  if ( iIndex != aText.length ) {
+	   iArrLength = aText[iIndex].length;
+	   setTimeout("typewriter()", 500);
+	  }
+	 } else {
+	  setTimeout("typewriter()", iSpeed);
+	 }
+	}
+
+
+	typewriter();
+
+	/*****+efecto random *****/
+function leterRandom(){
+var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
+var ctnt = "Loteria de Palabras"; // Your text goes here
+var speed = 20; // ms per frame
+var increment = 8; // frames per step. Must be >2
+
+    
+var clen = ctnt.length;       
+var si = 0;
+var stri = 0;
+var block = "";
+var fixed = "";
+//Call self x times, whole function wrapped in setTimeout
+(function rustle (i) {          
+setTimeout(function () {
+  if (--i){rustle(i);}
+  nextFrame(i);
+  si = si + 1;        
+}, speed);
+})(clen*increment+1); 
+function nextFrame(pos){
+  for (var i=0; i<clen-stri; i++) {
+    //Random number
+    var num = Math.floor(theLetters.length * Math.random());
+    //Get random letter
+    var letter = theLetters.charAt(num);
+    block = block + letter;
+  }
+  if (si == (increment-1)){
+    stri++;
+  }
+  if (si == increment){
+  // Add a letter; 
+  // every speed*10 ms
+  fixed = fixed +  ctnt.charAt(stri - 1);
+  si = 0;
+  }
+ document.getElementById("messenger").innerHTML=fixed + block
+  block = "";
+}
+};
+leterRandom()
 
 </script>
 
